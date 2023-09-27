@@ -1,0 +1,95 @@
+<style>
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        .
+    }
+
+    .fundoFor {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .fundo h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario label {
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+
+    .formulario input,
+    .formulario select {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        border-color: black;
+        border-style: solid;
+    }
+
+    .formulario button,
+    button {
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
+
+    .formulario button,
+    button {
+        background-color: #6a3ddb;
+        border-radius: 10px;
+        font-size: 1em;
+        word-spacing: 1px;
+        font-weight: medium;
+        border-radius: 10px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .formulario button:hover {
+        background-color: #8d6ae5;
+    }
+
+    .erro {
+        color: red;
+    }
+</style>
+
+<main>
+    <div class="container">
+        <div class="fundoFor">
+            <h3> Login </h3>
+            <div class="formulario">
+                <div class="questionario">
+                    <form action="/auth/login" method="POST">
+                        <input type="text" name="username" placeholder="Nome de Usuário" required> <br>
+                        <input type="password" name="senha" placeholder="Senha" required>
+                        <br>
+                        <p class="erro">{{error}}</p>
+
+                        <button type="submit">
+                            Entrar
+                        </button>
+
+                    </form>
+                    <p style="color: rgb(0, 0, 0);">Não possui uma conta? Cadastre-se aqui</p>
+                    <a href="/auth/register">
+                        <button type="submit">Cadastrar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+</main>

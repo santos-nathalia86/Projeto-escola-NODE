@@ -1,0 +1,105 @@
+<style>
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+
+  .lista {
+    text-align: center;
+  }
+
+  .lista h2 {
+    font-size: 1.8em;
+  }
+
+  .lista hr {
+    width: 99%;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+  }
+
+  .lista button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #8d6ae5;
+    border-radius: 10px;
+    color: #fff;
+
+  }
+
+  .listaTurma {
+    margin-bottom: 20px;
+  }
+
+  .turma {
+    border: 1px solid #6557e0;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: justify;
+    padding-left: 25px;
+  }
+
+  .turma h4 {
+    font-size: 1em;
+    margin-bottom: 1px;
+  }
+
+  .turma small {
+    font-size: 1em;
+  }
+
+  .turma a {
+    text-decoration: none;
+  }
+
+  .turma button,
+  .btn {
+    padding: 10px 20px;
+    background-color: #8d80fc;
+    border-radius: 10px;
+    font-size: 1em;
+    word-spacing: 1px;
+    font-weight: medium;
+    border-radius: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+
+<main>
+  <div class="container">
+    <div class="lista">
+      <h2>Lista de turmas</h2>
+      <hr>
+      <a href="/rota_turma/turma/add">
+        <button class="btn">Nova turma</button></a>
+      {{#each turmas}}
+      <div class="listaTurma">
+        <div class="turma">
+          <h4><b>ID:</b>{{Id_turma}}</h4>
+          <small><b>Turma:</b> {{Descrição}} </small><br>
+          <small><b>Professor responsável:</b> {{nome_responsavel}} </small><br>
+          <!--Botão para editar alunos-->
+          <a href="/rota_turma/editar_turma/{{Id_turma}}">
+            <button>
+              Editar turma
+            </button>
+          </a>
+          <!--botão para deletar aluno-->
+          <a href="/rota_turma/deletar_turma/{{Id_turma}}">
+            <button onclick="javascript:alert('Deletado com sucesso!')">
+              Deletar turma
+            </button>
+
+          </a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</main>

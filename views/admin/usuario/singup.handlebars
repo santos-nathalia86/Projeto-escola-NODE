@@ -1,0 +1,84 @@
+<style>
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        .
+    }
+
+    .fundoFor {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .fundo h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario label {
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+
+    .formulario input,
+    .formulario select {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        border-color: black;
+        border-style: solid;
+    }
+
+    .formulario button,
+    button {
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
+
+    .formulario button,
+    button {
+        background-color: #6a3ddb;
+        border-radius: 10px;
+        font-size: 1em;
+        word-spacing: 1px;
+        font-weight: medium;
+        border-radius: 10px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .formulario button:hover {
+        background-color: #8d6ae5;
+    }
+</style>
+
+<div class="container">
+    <div class="fundoFor">
+        <h1>Registro</h1>
+        <div class="formulario">
+            <div class="questionario">
+                <form action="/auth/register" method="POST">
+                    <input type="text" name="username" placeholder="Nome de Usuário" required> <BR>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <BR>
+                    <input type="password" name="senha" placeholder="Senha" required>
+                    <BR>
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+            <p>{{error}}</p>
+            <a href="/auth/login">
+                <p style="color: rgb(0, 0, 0);">Já tem uma conta? Faça
+                    login aqui</p>
+            </a>
+        </div>
+    </div>

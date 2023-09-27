@@ -1,0 +1,57 @@
+<style>
+  /* Estilo para a navegação */
+  .menu {
+    background-color: #6557e0;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu .botao a {
+    color: #ffffff;
+    font-size: 20px;
+    text-decoration: none;
+    margin-right: 10px;
+    {{!-- font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; --}}
+  }
+
+  .menu .menuBotoes {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .menu .menuBotoes .botoes {
+    margin: 0 10px;
+  }
+
+  .menu .menuBotoes .botoes a {
+    color: #d9d5f7;
+    font-weight: 500;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .menu .menuBotoes .botoes a:hover {
+    color: #fff;
+    border-bottom: #d9d5f7 solid 1px;
+  }
+</style>
+
+<nav class="menu">
+  <div class="botao">
+    <a href="/">Escola</a>
+  </div>
+
+  <ul class="menuBotoes">
+    <li class="botoes"><a href="/">Home</a></li>
+    <li class="botoes"><a href="/rota_turma/turma">Turma</a></li>
+    <li class="botoes"><a href="/rota_aluno/aluno">Aluno</a></li>
+    <li class="botoes"><a href="/rota_responsavel/responsavel"> Responsável</a></li>
+
+  </ul>
+</nav>

@@ -1,0 +1,78 @@
+<style>
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        .
+    }
+
+    .fundoFor {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .fundo h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario label {
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+
+    .formulario input,
+    .formulario select {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        border-color: black;
+        border-style: solid;
+    }
+
+    .formulario button {
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
+
+    .formulario button {
+        background-color: #6a3ddb;
+        border-radius: 10px;
+        font-size: 1em;
+        word-spacing: 1px;
+        font-weight: medium;
+        border-radius: 10px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .formulario button:hover {
+        background-color: #8d6ae5;
+    }
+</style>
+<main>
+    <div class="container">
+        <div class="fundoFor">
+            <h3> Novo professor : </h3>
+            <div class="formulario">
+                <div class="questionario">
+                    <form action="/rota_responsavel/responsavel/nova" method="POST">
+                        <label for="nome_responsavel">Nome: </label>
+                        <input type="text" id="nome_responsavel" name="nome_responsavel" placeholder="Digite o nome do responsável"
+                            class="form-control">
+                        <br>
+                        <button type="submit" onclick="javascript:alert('Cadastrado com sucesso!')">Cadastrar responsável</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,105 @@
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    .lista {
+        text-align: center;
+    }
+
+    .lista h2 {
+        font-size: 1.8em;
+    }
+
+    .lista hr {
+        width: 99%;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+    }
+
+    .lista button {
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #8d6ae5;
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    .listaAluno {
+        margin-bottom: 20px;
+    }
+
+    .Alunos {
+        border: 1px solid #6557e0;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        text-align: justify;
+        padding-left: 45px;
+    }
+
+    .Alunos h4 {
+        font-size: 1em;
+        margin-bottom: 1px;
+    }
+
+    .Alunos small {
+        font-size: 1em;
+    }
+
+    .Alunos a {
+        text-decoration: none;
+    }
+
+    .Alunos button, button {
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: #8d80fc;
+        font-size: 1em;
+        word-spacing: 1px;
+        font-weight: medium;
+        border-radius: 10px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<main>
+    <div class="container">
+        <div class="lista">
+            <h2>Lista de Alunos</h2>
+            <hr>
+            <a href="/rota_aluno/aluno/add">
+                <button class="btn">Novo Aluno</button>
+            </a>
+
+            {{#each alunos}}
+            <div class="listaAluno">
+                <div class="Alunos">
+                    <h4><b>ID:</b> {{id_aluno}}</h4>
+                    <small><b>Nome:</b> {{nome}} </small><br>
+                    <small><b>Matricula:</b> {{matricula}} </small><br>
+                    <small><b>Turma:</b> {{descricao}} </small>
+                    <br><br>
+                    <a href="/rota_aluno/editar_aluno/{{id_aluno}}">
+                        <button>
+                            Editar aluno
+                        </button>
+                    </a>
+
+                    <a href="/rota_aluno/deletar_aluno/{{id_aluno}}">
+                        <button>
+                            Deletar aluno
+                        </button>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>

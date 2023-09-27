@@ -1,0 +1,92 @@
+<style>
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        .
+    }
+
+    .fundoFor {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    .fundo h3 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario label {
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+
+    .formulario input,
+    .formulario select {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        border-color: black;
+        border-style: solid;
+    }
+
+    .formulario button {
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
+
+    .formulario button {
+        background-color: #6a3ddb;
+        border-radius: 10px;
+        font-size: 1em;
+        word-spacing: 1px;
+        font-weight: medium;
+        border-radius: 10px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+    .formulario button:hover {
+        background-color: #8d6ae5;
+    }
+</style>
+<main>
+    <div class="container">
+        <div class="fundoFor">
+
+            <h3> Nova turma </h3>
+            <div class="formulario">
+                {{!-- corpo --}}
+                <div class="questionario">
+                    <form action="/rota_turma/turma/add" method="post">
+
+                        <label for="descricao">Descrição: </label>
+                        <input type="text" id="descricao" name="descricao" placeholder="Digite a descrição da turma"
+                            class="form-control">
+                        <br>
+
+                        <label for="responsavel">Responsável: </label>
+                        <select name="responsavel_fk" class="custom-select">
+                            {{#each responsaveis}}
+                            <option value="{{id_responsavel}}">{{nome_responsavel}}</option>
+                            {{else}}
+                            <option value="0">Nenhum responsavel registrado</option>
+                            {{/each}}
+                        </select>
+                        <button type="submit" class="btn" onclick="javascript:alert('Cadastrado com sucesso!')">
+                            Cadastrar turma
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+</main>

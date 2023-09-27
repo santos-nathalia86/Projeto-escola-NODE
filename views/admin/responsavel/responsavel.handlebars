@@ -1,0 +1,103 @@
+<style>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+    }
+
+    .lista {
+        text-align: center;
+    }
+
+    .lista h2 {
+        font-size: 1.8em;
+    }
+
+    .lista hr {
+        width: 99%;
+        margin: 10px auto;
+        border: 1px solid #ccc;
+    }
+
+    .lista button {
+        padding: 10px 20px;
+        margin: 10px;
+        background-color: #8d6ae5;
+        border-radius: 10px;
+        color: #fff;
+    }
+
+    .listRespoonsaveis {
+        margin-bottom: 20px;
+    }
+
+    .Responsaveis {
+        border: 1px solid #6557e0;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        text-align: justify;
+        padding-left: 45px;
+    }
+
+    .Responsaveis h4 {
+        font-size: 1em;
+        margin-bottom: 1px;
+    }
+
+    .Responsaveis small {
+        font-size: 1em;
+    }
+
+    .Responsaveis a {
+        text-decoration: none;
+    }
+
+    .Responsaveis button,
+    .btn {
+        padding: 10px 20px;
+        margin: 5px;
+        background-color: #8d80fc;
+        border-radius: 10px;
+        font-size: 1em;
+        word-spacing: 1px;
+        font-weight: medium;
+        border-radius: 10px;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+<main>
+    <div class="container">
+        <div class="lista">
+            <h2>Lista de professores responsáveis</h2>
+            <hr>
+            <a href="/rota_responsavel/responsavel/add">
+                <button class="btn">Novo responsável </button>
+            </a>
+            {{#each responsaveis}}
+            <div class="listRespoonsaveis">
+                <div class="Responsaveis">
+                    <h4><b>ID: </b>{{id_responsavel}}</h4>
+                    <small><b>Nome do responsável: </b>{{nome_responsavel}}</small>
+                    <br>
+                    <a href="/rota_responsavel/editar_responsavel/{{id_responsavel}}">
+                        <button class="btn">
+                            Editar professor
+                        </button>
+                    </a>
+
+                    <a href="/rota_responsavel/deletar_responsavel/{{id_responsavel}}">
+                        <button class="btn" onclick="javascript:alert('Excluído com sucesso!')"> Excluir
+                            professor</button>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>
